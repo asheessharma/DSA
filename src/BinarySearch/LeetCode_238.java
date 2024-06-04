@@ -7,7 +7,7 @@ import java.util.Arrays;
 * product from right side */
 public class LeetCode_238 {
     public static void main(String[] args) {
-        int [] arr={1,2,3,4};
+        int [] arr={1,2,3,4,5};
         System.out.println(Arrays.toString(Product(arr)));
     }
     static int[] Product(int [] arr){

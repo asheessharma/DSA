@@ -2,9 +2,10 @@ package SortingAlgoes;
 
 import java.util.Arrays;
 //it works better with linkedList due to random memory allocation.
+//This Divide & Conquer technique has  better time complexity than bubble,selection,insertion sort i.e, T(n) =  2T(n/2)+n
 public class MergeSort {
     public static void main(String[] args) {
-        int [] arr={2,1,4,5,3};
+        int [] arr={2,1,4,5,3,-1};
         MergesortInPlace(arr,0,arr.length);
         System.out.println(Arrays.toString(arr));
     }
