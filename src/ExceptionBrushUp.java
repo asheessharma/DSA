@@ -1,5 +1,7 @@
 import org.w3c.dom.ls.LSOutput;
-
+// Throw keyword is used to throw custom exception.It's a good practice to throw only unchecked exception.
+// It creates an object[exception,description,stack trace] and manually passes it to JVM. JVM handles it like any other predefined function.
+// It will abnormally terminate the program, if you don't handle the exception using try catch block.
 import java.util.Scanner;
 
 class NotEligible extends RuntimeException{
@@ -22,6 +24,9 @@ public class ExceptionBrushUp {
         }
         catch (NotEligible e){
             System.out.println("Wait till you turn 18 :)");
+        }
+        finally {
+            System.out.println("****** Now Fuck off *******");
         }
 
     }
