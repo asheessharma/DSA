@@ -8,7 +8,7 @@ package TCSDigital2024;
     }
 
 }
-public class OOPtraction extends Demo {
+public class oops_Abstraction extends Demo {
    public void display(){
        System.out.println("Abstract Method overriding ");
     }
@@ -18,7 +18,7 @@ public class OOPtraction extends Demo {
     }
 
     public static void main(String[] args) {
-        OOPtraction obj = new OOPtraction();
+        oops_Abstraction obj = new oops_Abstraction();
         obj.display();
         obj.non_Abstract();
 //        obj.non_Abstract();
