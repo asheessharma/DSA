@@ -1,11 +1,10 @@
 package BinarySearch;
-
 public class Leetcode_1095 {
     public static void main(String[] args) {
         int [] arr={1,2,3,4,5,3,1};
         System.out.println(search(arr,5));
     }
-    static int search(int [] arr, int target){
+     static int search(int [] arr, int target){
        int peak= peakIndexInMountainArray(arr);
        int index=orderAgnosticBS(arr,target,0, peak);
        if(index == -1){
@@ -13,10 +12,8 @@ public class Leetcode_1095 {
        }
        return index;
     }
-    static int orderAgnosticBS(int [] nums , int target , int start, int end){
-
+    static int orderAgnosticBS(int [] nums, int target, int start, int end){
         boolean isAscending= nums[start] < nums[end];
-
         while(start <= end){
             int mid= start + (end - start)/2;
             if(target ==  nums[mid]){
@@ -37,6 +34,7 @@ public class Leetcode_1095 {
         }
         return -1 ;
     }
+
     public static int peakIndexInMountainArray(int[] arr) {
         int start= 0;
         int end = arr.length-1;

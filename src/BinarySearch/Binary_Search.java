@@ -1,13 +1,11 @@
 package BinarySearch;
-
 import java.util.Scanner;
-
 public class Binary_Search {
+
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int N= sc.nextInt();
         int [] nums=new int[N];
-
         for (int i = 0; i < N; i++) {
             nums[i]=sc.nextInt();
         }
@@ -34,7 +32,7 @@ public class Binary_Search {
     static int orderAgnosticBS(int [] nums , int target){
         int start=0;
         int end= nums.length-1;
-        boolean isAscending= nums[start] < nums[end];
+        boolean isAscending = nums[start] < nums[end];
 
         while(start <= end){
             int mid= start + (end - start)/2;
