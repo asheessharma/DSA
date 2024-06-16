@@ -21,7 +21,7 @@ public class ReverseLinkList {
         }
         System.out.println();
     }
-    public static Node reverseList(Node head){
+    private static Node reverseList(Node head){
 
         Node curr=head;
         Node prev=null;
