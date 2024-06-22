@@ -13,8 +13,11 @@ public class Rough {
 
 
 //        System.out.println(noofbits(10));
-        permutation("","abc");
+//        permutation("","abc");
+        char [] chars = {'a','b','b','b','c','c','c','c','c','c','c','c','c','c','c','c','c','c','c','c','c','c'};
+        compress(chars);
     }
+
 //    static void missingNumbers(int [] arr,int k){
 //        int [] missing=new int[k];
 //        int index=0;
@@ -133,6 +136,68 @@ public static int singleNonDuplicate(int[] nums) {
         }
         permutation(p+up.charAt(0),up.substring(1));
         permutation(p,up.substring(1));
+    }
+    private static void compress(char [] chars){
+//        HashMap<Character, Integer> map = new HashMap<>();
+//        for(char ch : chars){
+//            if(!map.containsKey(ch)){
+//                map.put(ch,1);
+//            }
+//            else{
+//                map.put(ch,map.get(ch)+1);
+//            }
+//        }
+//        ArrayList<String> list = new ArrayList<>();
+//        for(Map.Entry<Character,Integer> set : map.entrySet()){
+//            list.add(Character.toString(set.getKey()));
+//            if(set.getValue() != 1){
+//                int v = set.getValue();
+//                if(v>9){
+//                    while(v!=0){
+//                        int data = v % 10;
+//                        list.add(Integer.toString(data));
+//                        v /= 10;
+//                    }
+//                }
+//                else{
+//                    String value = Integer.toString(set.getValue());
+//                    list.add( value);
+//                }
+//            }
+//        }
+//        System.out.println(list);
+//        System.out.println(list.size());
+        int n = chars.length;
+        if (n == 0) {
+            System.out.println("Fuck You");
+        }
+
+        int write = 0; // Index to write the result
+        int anchor = 0; // Start of the group of characters
+
+        for (int read = 0; read < n; read++) {
+            // If we reached the end of the array or the current character is different from the next one
+            if (read + 1 == n || chars[read] != chars[read + 1]) {
+                chars[write++] = chars[anchor]; // Write the character
+
+                // If the group length is more than 1, write the length
+                if (read > anchor) {
+                    int length = read - anchor + 1;
+                    for (char c : Integer.toString(length).toCharArray()) {
+                        chars[write++] = c;
+                    }
+                }
+
+                // Move the anchor to the next group of characters
+                anchor = read + 1;
+            }
+        }
+
+        System.out.println(write);
+
+
+
+
     }
 
 
