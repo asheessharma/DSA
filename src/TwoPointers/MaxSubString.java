@@ -3,14 +3,14 @@ package TwoPointers;
 import java.util.Arrays;
 import java.util.Scanner;
 
-//********* WITHOUT REPEATING CHARACTERS ********* //
+// ******** WITHOUT REPEATING CHARACTERS ********* //
 public class MaxSubString {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
         hashing(str);
-//        System.out.println("___________________");
-//        TwoPointers("cabdzacdb");
+        System.out.println("___________________");
+        TwoPointers(str);
     }
     private static void hashing(String str){
 
