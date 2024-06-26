@@ -2,7 +2,7 @@ package TwoPointers;
 
 import java.util.Scanner;
 
-public class MaxSubArrOfOnes_3 {
+public class MostConsecutiveOnes_3 {
     private static void iterative(int [] arr , int k){
         //k = at-most zeros allowed to flip to max a max len substring
         int maxLen =0 ;
