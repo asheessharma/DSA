@@ -2,7 +2,7 @@ package TwoPointers;
 import  java.util.Scanner;
 import java.util.HashMap;
 
-public class MaxSubKDistinctChar {
+public class MaxSubKDistinctChar { 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter any String : ");
