@@ -1,3 +1,5 @@
+package Stack_Queue;
+
 public class Queue_arr {
     private int [] arr;
     private  int start , end ,currSize , maxSize;

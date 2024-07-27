@@ -1,3 +1,5 @@
+package Stack_Queue;
+
 import java.util.Scanner;
 
 public class Stack_Imple {
