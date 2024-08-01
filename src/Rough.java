@@ -1,5 +1,68 @@
 import  java.util.*;
+
+
 public class Rough {
+    private int [] arr;
+    private  int currSize , maxsize , start , end ;
+    public Rough(){
+        start = -1 ;
+        end = -1;
+        arr = new int[10];
+        currSize = 0;
+    }
+    public Rough(int size){
+        maxsize = size;
+        arr = new int[maxsize];
+        start = -1 ;
+        end = -1;
+        currSize = 0;
+    }
+    public void push(int x){
+        if(currSize == maxsize){
+            System.out.println("Queue is full ... \n Exiting ....");
+            System.exit(1);
+        }
+        if(end == -1){
+            start = 0;
+            end = 0;
+        }
+        else{
+            end = (end + 1) % maxsize;
+        }
+        arr[end] = x;
+        System.out.println("Pushed " + x);
+        currSize++;
+    }
+    public void pop(){
+        if(start==-1){
+            System.out.println("Queue is Empty... \n Exiting....");
+            System.exit(1);
+        }
+        int ele  = arr[start];
+        if(currSize == 1){
+                start = 0;
+                end = 0;
+        }
+        else{
+            start = (start + 1) % maxsize;
+        }
+        System.out.println("Popped ele : " + ele);
+        currSize--;
+    }
+    public void top(){
+        if(start == -1){
+            System.out.println("Invalid Request... \n Exiting... ");
+            System.exit(1);
+        }
+        System.out.println("Top element is : " + arr[start]);
+    }
+
+    public void Curr_size(){
+        System.out.println("Size is : " + currSize);
+    }
+    public boolean isempty(){
+        return !(currSize == 0);
+    }
     public static void main(String[] args) {
 //        int [] arr = {1,2,3,4};int k = 2;
 //        missingNumbers(arr,k);
@@ -14,8 +77,18 @@ public class Rough {
 
 //        System.out.println(noofbits(10));
 //        permutation("","abc");
-        char [] chars = {'a','b','b','b','c','c','c','c','c','c','c','c','c','c','c','c','c','c','c','c','c','c'};
-        compress(chars);
+//        char [] chars = {'a','b','b','b','c','c','c','c','c','c','c','c','c','c','c','c','c','c','c','c','c','c'};
+//        compress(chars);
+        Rough q = new Rough(5);
+        q.push(1);
+        q.push(12);
+        q.push(13);
+        q.push(14);
+        q.push(15);
+        while(q.isempty()){
+            q.pop();
+        }
+
     }
 
 //    static void missingNumbers(int [] arr,int k){
@@ -96,7 +169,7 @@ public class Rough {
 //    private  static void printArray(int [] arr){
 //        System.out.println(Arrays.toString(arr));
 //    }
-public static int singleNonDuplicate(int[] nums) {
+    public static int singleNonDuplicate(int[] nums) {
     int left = 0;
     int right = nums.length - 1;
 
@@ -176,7 +249,7 @@ public static int singleNonDuplicate(int[] nums) {
         int anchor = 0; // Start of the group of characters
 
         for (int read = 0; read < n; read++) {
-            // If we reached the end of the array or the current character is different from the next one
+            // If we reached the end of the array or the currSizeent character is different from the next one
             if (read + 1 == n || chars[read] != chars[read + 1]) {
                 chars[write++] = chars[anchor]; // Write the character
 

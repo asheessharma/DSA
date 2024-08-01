@@ -6,19 +6,28 @@ class Q{
     Stack<Integer> first = new Stack<>();
     Stack<Integer> second = new Stack<>();
     void enQ(int x){
-        while(first.size()>0){
-            second.push(first.pop());
+        while(!first.empty()){
+            second.push(first.peek());
+            first.pop();
         }
+        System.out.println("The Element Pushed is : " + x);
         first.push(x);
-        while(second.size()>0){
-            first.push(second.pop());
+        while(!second.empty()){
+            first.push(second.peek());
+            second.pop();
         }
     }
 
     int dQ(){
-        return first.pop();
+        if(first.empty()) System.out.println( " Stack is Empty ");
+        int val = first.peek();
+        first.pop();
+        return val;
     }
     int peekQ(){
+        if(first.empty()){
+            System.out.println("Stack is Empty");
+        }
         return first.peek();
     }
     int size(){

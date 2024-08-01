@@ -27,7 +27,6 @@ public class Queue_arr {
         }
         else{
             end = (end + 1)% maxSize;
-//            end = end + 1;
         }
         arr[end] = newEle;
         System.out.println("The element pushed is : " + newEle);
