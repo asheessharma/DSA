@@ -2,7 +2,7 @@ package Garbaje_Section;
 
 import java.util.Map;
 import java.util.TreeMap;
-
+// It follows (default) sorting order based on keys. You can redefine sorting order using comparator function.
 public class Treemap {
     public static void main(String[] args) {
         TreeMap<Integer,Integer> map = new TreeMap<>();
