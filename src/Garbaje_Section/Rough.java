@@ -1,4 +1,4 @@
-import  java.util.*;
+package Garbaje_Section;
 
 
 public class Rough {
