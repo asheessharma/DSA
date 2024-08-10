@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class InfixToPostfix {
-    static int Prec(char ch){
+    static int priority(char ch){
         return switch (ch) {
             case '+', '-' -> 1;
             case '*', '/' -> 2;
@@ -33,7 +33,7 @@ public class InfixToPostfix {
                 s.pop();
             }
             else{
-                while(!s.empty() && Prec(arr[i])<= Prec(s.peek())){
+                while(!s.empty() && priority(arr[i])<= priority(s.peek())){
                         ans += s.pop();
                 }
                 s.push(arr[i]);
