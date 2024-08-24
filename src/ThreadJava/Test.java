@@ -1,3 +1,5 @@
+package ThreadJava;
+
 //Thread class implements Runnable interface, which has only one abstract method run();
 public class Test extends Thread{
     public void run(){

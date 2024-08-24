@@ -1,3 +1,5 @@
+package ThreadJava;
+
 class MyThread extends Thread{
     public void run(){
         for(int i=-10;i<200;i++){
