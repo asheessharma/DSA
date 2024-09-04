@@ -1,5 +1,8 @@
 package SlidingWindow;
 
+
+import java.util.Scanner;
+
 public class MaxSumSubArr {
     private static void bruteForceUsingLoops(int [] arr , int k){
         int n = arr.length;
@@ -35,7 +38,17 @@ public class MaxSumSubArr {
 
 
     public static void main(String[] args) {
-        bruteForceUsingLoops(new int[]{2,1,3,4,5,9,9} , 3);
-        usingSlidingWindow(new int[]{2,1,3,4,5,9,9} , 3);
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the length of arr : ");
+        int input = sc.nextInt();
+        int [] numbs = new int[input];
+        for(int i = 0; i < input ; i++){
+            System.out.print("Enter " + i+1 +"st element : ");
+            numbs[i] = sc.nextInt();
+        }
+        System.out.println("Enter length of SubArray [Window] :");
+        int k  = sc.nextInt();
+        bruteForceUsingLoops(numbs, k);
+        usingSlidingWindow(numbs,k);
     }
 }
