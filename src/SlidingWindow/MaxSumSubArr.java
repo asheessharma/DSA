@@ -23,7 +23,7 @@ public class MaxSumSubArr {
         int sum = 0;
         int max = 0;
         while(j<n){
-             if(j - i < k){
+             if((j - i + 1) <= k){
                  sum += arr[j];
              }
              else{
@@ -43,10 +43,10 @@ public class MaxSumSubArr {
         int input = sc.nextInt();
         int [] numbs = new int[input];
         for(int i = 0; i < input ; i++){
-            System.out.print("Enter " + i+1 +"st element : ");
+            System.out.print("Enter " + (i+1) +" st element : ");
             numbs[i] = sc.nextInt();
         }
-        System.out.println("Enter length of SubArray [Window] :");
+        System.out.print("Enter length of SubArray [Window] : ");
         int k  = sc.nextInt();
         bruteForceUsingLoops(numbs, k);
         usingSlidingWindow(numbs,k);
