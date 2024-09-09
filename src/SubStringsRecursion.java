@@ -4,7 +4,7 @@ public class SubStringsRecursion {
        // subStrWithoutA("","abcabacb");
        // removeSubStr("","gla","universityglamathura");
 //        subsets("","abc");
-        permutations("","ashi");
+        permutations("","ash");
     } 
     static void subStrWithoutA(String p,String up){
         if(up.isEmpty()){

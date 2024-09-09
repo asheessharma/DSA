@@ -28,7 +28,7 @@ public class FirstNegNumInSubArr {
                     list.add(0);
                 }
 
-                if(!dq.isEmpty() && dq.peekFirst()== arr[j-k + 1]){
+                if(!dq.isEmpty() && dq.peekFirst()== arr[j - k + 1]){
                     dq.pollFirst();
                 }
                 i++;
