@@ -7,4 +7,4 @@
   👉 Optimized Approaches: Progress to advanced, efficient solutions designed to enhance performance and demonstrate best practices.
   👉 Java Implementations: All solutions are implemented in Java, making them accessible to a wide range of developers
 
-   ⚡ Happy Coding! 🎉
+   ⚡ Jai Coding! 🎉
