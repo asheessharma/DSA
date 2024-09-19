@@ -44,30 +44,36 @@ class Employee {
     }
     @Override
     public String toString(){
-        return "Employee[id = "+id + " ,salary= "+salary+", name= "+Name+", department= "+jobTitle+"]";
+        return "id = "+id + " ,salary= "+salary+", name= "+Name+", department= "+jobTitle+" ";
     }
-//    public void increment(int salary, int percentage){
-//        int newSalary = 0;
-//        newSalary = salary + (salary * (percentage / 100));
-//        System.out.println("Salary after increment of "+ percentage + "% is: " + newSalary);
-//    }
-    public void updateSalary(Employee[] employees ,int id, int newSalary){
+
+    public static void updateSalary(Employee[] employees ,int id, int newSalary){
         for(Employee emp : employees){
             if(emp.id == id){
                 emp.salary = newSalary;
+                break;
             }
         }
         System.out.println("Salary Updated Successfully...." );
     }
-    public void updateName(Employee[] employees ,int id, String newName){
+    public static void updateName(Employee[] employees ,int id, String newName){
         for(Employee emp : employees){
             if(emp.id == id){
                 emp.Name = newName;
-                System.out.println("Name Updated Successfully...." + emp.getName());
+                System.out.println("Name Updated Successfully....");
+                break;
             }
         }
-
     }
+    public static void showDetails(Employee [] employees,int id){
+        for(Employee emp : employees){
+            if(emp.id == id){
+                System.out.println(emp.toString());
+                break;
+            }
+        }
+    }
+
 
 
 

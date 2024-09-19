@@ -17,7 +17,9 @@ public class main {
         for(Employee employee : employees){
             System.out.println(employee.toString());
         }
-
+        Employee.updateSalary(employees,1,22500);
+        Employee.updateName(employees,1, "Ashish");
+        Employee.showDetails(employees,1);
 
     }
 }
