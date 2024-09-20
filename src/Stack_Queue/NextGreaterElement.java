@@ -12,11 +12,12 @@ public class NextGreaterElement {
             while(!s.empty() && s.peek() <= arr[i]){
                 s.pop();
             }
-            if(s.empty()){
-                ans[i]=-1;
-            }else{
-                ans[i]=s.peek();
-            }
+//            if(s.empty()){
+//                ans[i]=-1;
+//            }else{
+//                ans[i]=s.peek();
+//            }
+            ans[i] = s.empty() ? -1 : s.peek();
             s.push(arr[i]);
         }
         return ans;
