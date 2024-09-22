@@ -1,13 +1,13 @@
 package Stack_Queue;
 import java.util.Stack;
 public class SumOfSubArrMin {
-    class Solution {
+
         public int sumSubarrayMins(int[] arr) {
 
-            HelperMethod help = new HelperMethod(); // Object of helper fun to access the method.
 
-            int[] nextSE = help.nextSmaller(arr);
-            int[] prevSE = help.previousSmaller(arr);
+
+            int[] nextSE = nextSmaller(arr);
+            int[] prevSE = previousSmaller(arr);
             long total = 0;
             int mod = (int)(1e9+7);
 
@@ -19,9 +19,9 @@ public class SumOfSubArrMin {
             }
             return (int) total;
         }
-    }
 
-    class HelperMethod {
+
+
         // Find the next smaller element
         public int[] nextSmaller(int[] arr) {
             int n = arr.length;
@@ -49,7 +49,7 @@ public class SumOfSubArrMin {
                 stk.push(i);
             }
             return pse;
-        }
+
     }
 
 
