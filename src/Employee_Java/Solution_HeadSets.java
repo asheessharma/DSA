@@ -2,7 +2,7 @@ package Employee_Java;
 
 import java.util.Scanner;
 
-public class Solution_Tcs {
+public class Solution_HeadSets {
     public static int findTotalPriceForGivenBrand(String newbrand, HeadSets[] obj){
         int totalprice=0;
         boolean found = false;
