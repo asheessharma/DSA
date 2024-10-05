@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class PasswordChecker {
     public static boolean isStrongPassword(String pass){
-        String regEx= "(?=.*[a-z])(?=.*[A-z])(?=.*[0-9])(?=.*[!@#$%&])?.{8,}";
+        String regEx= "(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%&])?.{8,}";
         Pattern p = Pattern.compile(regEx);
         Matcher m = p.matcher(pass);
         return m.matches();
