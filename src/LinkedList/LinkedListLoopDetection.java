@@ -1,18 +1,20 @@
-class Node {
+package LinkedList;
+
+class Node0 {
       int val;
-      Node next;
-      Node(int x) {
+      Node0 next;
+      Node0(int x) {
           val = x;
           next = null;
       }
   }
 public class LinkedListLoopDetection {
-    public static boolean hasCycle(Node head) {
+    public static boolean hasCycle(Node0 head) {
         if(head==null ){
             return false;
         }
-        Node hare=head;
-        Node turtle=head;
+        Node0 hare=head;
+        Node0 turtle=head;
         while(  hare!=null && hare.next!=null ){
             hare=hare.next.next;
             turtle=turtle.next;
@@ -25,11 +27,11 @@ public class LinkedListLoopDetection {
     }
     public static void main(String[] args) {
 
-        Node head = new Node(1);
-        Node second = new Node(2);
-        Node third = new Node(3);
-        Node fourth = new Node(4);
-        Node fifth = new Node(5);
+        Node0 head = new Node0(1);
+        Node0 second = new Node0(2);
+        Node0 third = new Node0(3);
+        Node0 fourth = new Node0(4);
+        Node0 fifth = new Node0(5);
 
         head.next = second;
         second.next = third;

@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class Shadowing {
-    static int x=90; //this class variable   will be shadowed at line 7
+    static int x=90; //this class variable, will be shadowed at line 7
 
     public static void main(String[] args) {
 //        System.out.println(x);
