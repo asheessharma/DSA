@@ -5,7 +5,7 @@ import org.w3c.dom.ls.LSOutput;
 import java.util.Scanner;
 
 class NotEligible extends RuntimeException{
-    NotEligible(String msg){
+   public NotEligible(String msg){
         super(msg);
     }
 }

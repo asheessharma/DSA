@@ -1,60 +1,35 @@
 package Interfaces;
 
 import  java.lang.FunctionalInterface;
+@FunctionalInterface
 interface i1{
 
-    public abstract void method1();
-    public default void method2(){
+    void method1(int a,int b);
+    default void method2(){
         System.out.println("default method");
     }
 
 }
+@FunctionalInterface
 interface i2 extends i1{
-
-
-    @Override
-    public default void method2(){
-        System.out.println("overridden method2");
-    }
-    public default void method3(){
-        System.out.println("Child interface");
+    default void method3(){
+        System.out.println("Interface i2 default method");
     }
 
-    @Override
-    void method1();
 }
 
 
-public class Demo implements i1,i2 {
-
-
-
-
-
+public class Demo {
 
     public static void main(String[] args) {
-        i1 obj = ()->System.out.println("this is lambda expression");
-        obj.method1();
+
+        i1 obj = (a,b) -> {System.out.println("this is lambda expression " + (a+b));};
+        obj.method1(2,3);
         obj.method2();
-        i2 obj2 = ()-> System.out.println("func");
-        obj2.method3();
-
-
-    }
-
-
-    @Override
-    public void method2() {
-        i2.super.method2();
-    }
-
-    @Override
-    public void method3() {
-        i2.super.method3();
-    }
-
-    @Override
-    public void method1() {
-
+        i2 obj1 = (c,d) ->{
+            System.out.println("sum-thing" + c+d);
+        };
+        obj1.method1(6,5);
+        obj1.method3();
     }
 }
