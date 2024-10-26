@@ -80,6 +80,17 @@ public class Student implements Sortable, Comparable<Student>{
         System.out.println("=======> Sorting by Name: ");
         manager.students.sort(null);
         manager.display();
+        System.out.println();
+        System.out.println("=======> Sorting by Age: ");
+        manager.sortBy("age");
+        manager.display();
+        System.out.println();
+        System.out.println("=======> Sorting by Grade: ");
+        manager.sortBy("grade");
+        manager.display();
+
+
+
 
 
 
