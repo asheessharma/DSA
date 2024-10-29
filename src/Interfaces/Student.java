@@ -31,28 +31,10 @@ public class Student implements Sortable, Comparable<Student>{
     public void sortBy(String str){
 
         if(str.equalsIgnoreCase("age")){
-            Comparator<Student> std = new Comparator<Student>() {
-                @Override
-                public int compare(Student o1, Student o2) {
-                    if(o1.age > o2.age){
-                        return 1;
-                    }
-                    else if(o1.age < o2.age) return -1;
-                    else return 0;
-                }
-            };
+            Comparator<Student> std = (o1, o2)-> o1.age > o2.age ? 1 : (o1.age < o2.age ? -1 : 0);
             students.sort(std);
         }else if(str.equalsIgnoreCase("grade")){
-            Comparator<Student> cmp = new Comparator<Student>() {
-                @Override
-                public int compare(Student o1, Student o2) {
-                    if(o1.grade > o2.grade){
-                        return 1;
-                    }
-                    else if(o1.grade < o2.grade) return -1;
-                    else return 0;
-                }
-            };
+            Comparator<Student> cmp = (o1,o2)-> o1.grade > o2.grade ? 1 :( (o2.grade > o1.grade) ? -1 : 0 );
             students.sort(cmp);
         }
     }
